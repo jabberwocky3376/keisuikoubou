@@ -1,0 +1,61 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+/*--- main ---*/
+
+
+#main {
+  display: flex;
+  flex-wrap: wrap;
+	justify-content: space-between;
+	width:80%;
+	margin:40px auto;
+	}
+
+#main section h3{
+	font-size:18px;
+}
+
+#main img{
+	margin:50px auto;
+}
+
+#main dl{
+	width:400px;
+	margin:100px 0px 0px 35px;
+	overflow:hidden;
+	text-align:left;
+}
+
+#main dt{
+	float:left;
+	clear:both;
+	width:10rem;
+}
+
+
+
+.maps {
+	position:relative;
+  margin: 0px auto
+  width: 100%;
+  padding-bottom: 30%;
+}
+.maps iframe {
+  position: absolute;
+	top:30px;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+
+
+
+/*-- toTop --*/
+
+.toTop{
+	width:1vm;
+	}

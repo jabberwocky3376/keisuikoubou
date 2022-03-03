@@ -1,0 +1,58 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/*--- main ---*/
+
+#main{
+		width:80%;
+		margin:0 auto;
+}
+
+#main ul{
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:center;
+}
+
+#main ul li{
+	width:80%;
+	padding:40px 30px;
+	text-align: center;
+	}
+
+#main ul li:hover{
+	cursor: pointer;
+	transition:.3s;
+		opacity:0.7;
+}
+
+#main ul li img{
+	width:120%;
+}
+
+#main ul li p{
+	font-size:14px;
+}
+
+
+
+
+/*-- toTop --*/
+
+.toTop{
+	clear:both;
+}
+
+
+@media screen and (min-width:750px){
+
+#main ul{
+	margin:0 auto;
+}
+
+#main ul li{
+	width:30%;
+}
+
+}

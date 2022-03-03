@@ -1,0 +1,129 @@
+@charset "UTF-8";
+
+
+
+*{
+	margin:0;
+	padding:0;
+}
+
+body{
+	font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
+	color: #333;
+	}
+
+li{
+ 	list-style:none;
+  }
+
+
+/*--- header ---*/
+
+.logo img{
+	width:300px;
+	max-width:50%;
+	margin:60px 100px 0px 160px;
+	color:#60B49F;
+	}
+
+.head{
+	text-align: center;
+}
+
+img.head{
+	width:60%;
+	}
+
+
+
+.navi1 {
+	margin:50px 70px 0px 0px;
+	padding-bottom:100px;
+	list-style-type: none;
+	padding-left: 0;
+
+}
+
+.navi1 li , .navi2 li {
+  	padding:10px 20px 0px 20px;
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	letter-spacing: 0.2em;
+
+}
+
+
+.navi1 .inline-block {
+	text-align: right;
+}
+
+.navi1 .inline-block li {
+	display: inline-block;
+}
+
+li a  {
+
+	color: #333;
+	text-decoration: none;
+}
+
+
+li a:hover{
+	color:#333;
+	text-decoration:underline;
+	}
+
+
+/*--- main ---*/
+
+.con{
+	color:#333;
+	width:100%;
+	margin:auto;
+	font-size:18px;
+	padding:150px 0px 50px 0px;
+	letter-spacing:0.3px;
+	line-height:2;
+	}
+
+.text{
+	width:80%;
+	margin:0 auto;
+}
+
+/*-- toTop --*/
+
+.toTop{
+	text-align:center;
+	padding-top:100px;
+	background:#
+	}
+.toTop img{
+	width:2.3%;
+	height:2.3%;
+	}
+
+
+/*--- footer ---*/
+
+.navi2{
+	padding:10px 10px 80px 80px;
+	}
+
+.navi2 .inline-block {
+	text-align: left;
+}
+.navi2 .inline-block li {
+	display: inline-block;
+}
+
+
+/*--- copyright ---*/
+
+
+.copy{
+	text-align:right;
+	clear:both;
+
+	}

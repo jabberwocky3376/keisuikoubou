@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>渓水工房</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link href="css/common.css" rel="stylesheet" media="all">
+<link href="css/about.css" rel="stylesheet" media="all">
+</head>
+
+<body id="Home">
+
+<div id="wrap">
+
+    <!-- header -->
+
+		<header>
+	    	<div id="logo"><a href="index.html"><img src = "img/head.jpg" ></a></div><!--///END #logo-->
+		</header>
+
+		<nav>
+	  	<ul>
+				<li class = "home"><a href="index.html">Home</a></li>
+				<li class = "about"><a href="about.html">About</a></li>
+				<li class = "gallery"><a href="gallery.html">Gallery</a></li>
+				<li class = "contact"><a href="contact.html">Contact</a></li>
+	    </ul>
+	 </nav>
+
+	<!-- main -->
+    <h2>About</h2>
+    <div id="main">
+				<div class="pic">
+				   <img src="img/about/kiyoshi.jpg" width="500" >
+					 <section>
+							 <h3 class="name">芥川　清（あくたがわ　きよし）</h3>
+							 <p class="from">◇出身　　京都市</p>
+							 <p>８２｀京都府陶工訓練校専攻科卒</p>
+							 <p>京焼茶陶・西村徳泉に師事</p
+							 <p>９２｀丹波市島にて独立開窯</p>
+							 <p>春日町に工房建築</p>
+							 <p>０４｀渓水工房へ移設<br></p>
+							 <p>◇個展など</p>
+							 <p>日本橋高島屋　　池袋東武</p>
+							 <p>新宿京王　　銀座田中ギャラリー</p>
+							 <p>沖縄リウボウ　その他</p>
+					 </section>
+				 </div><!---END #pic -->
+
+				 <div class="pic">
+				   <img src="img/about/keiko.jpg"  width="500">
+            <section>
+                <h3 class="name">芥川　啓子　（あくたがわけいこ）</h3>
+                <p class="from">◇出身　　　兵庫県丹波市春日町</p>
+                <p>京都産業大学卒</p>
+                <p>８２｀京都府陶工訓練校図案科卒</p>
+                <p>京都清水焼・「山本一楽」従事</p>
+                <p>９２｀丹波市島にて独立開窯</p>
+                <p>９５｀東映映画「蔵」撮影のために猪口など制作</p>
+                <p>０３｀春日町に工房を建築</p>
+                <p>０４｀渓水工房へ移設</p>
+     	   		</section>
+				 </div><!---END #pic -->
+
+				 <div class="prof">
+					 <dl>
+						 <dt>工房名：</dt>
+						 <dd>渓水工房</dd>
+						 <dt>所在地：</dt>
+						 <dd>兵庫県丹波市</dd>
+						 <dt>お問い合わせ：</dt>
+						 <dd>k-sui@grape.plala.or.jp</dd>
+						 <dt>事業内容：</dt>
+						 <dd>陶芸作品販売</dd>
+					 </dl>
+				 </div><!--END #pic-->
+
+
+		 </div><!--///END #main-->
+
+
+
+			 <div class="maps">
+				 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3261.3460243342474!2d135.10371021523287!3d35.17292728031591!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60000f7d8e78244b%3A0xfa505c49d72a9cf2!2z44CSNjY5LTQxNDEg5YW15bqr55yM5Li55rOi5biC5pil5pel55S66buS5LqV77yR77yX77yS77yUIOa4k-awtOW3peaIvw!5e0!3m2!1sja!2sjp!4v1547630116730" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+			 </div>
+
+
+
+
+
+
+	<!-- toTop -->
+		<p class="toTop"><a href="#"><img src="img/icon_totop.gif" alt=""></a></p>
+
+
+
+	<!--footer-->
+	<footer>
+		<nav>
+			<ul id = "footer_nav">
+				<li class = "home"><a href="index.html">About</a></li>
+				<li class = "about"><a href="about.html">Works</a></li>
+				<li class = "gallery"><a href="gallery.html">Gallery</a></li>
+				<li class = "contact"><a href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+		<p>&copy; 渓水工房 All rights reserved.</p>
+	</footer> <!--///END #footer-->
+
+
+<!-- jQuery本体の読み込み -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+<!-- ＃リンクのスムーズスクロール -->
+<script>
+$(function(){
+   // #で始まるリンクをクリックしたら実行されます
+   $('a[href^=#]').click(function() {
+      // スクロールの速度
+      var speed = 500; // ミリ秒で記述
+      var href= $(this).attr("href");
+      var target = $(href == "#" || href == "" ? 'html' : href);
+      var position = target.offset().top;
+      $('body,html').animate({scrollTop:position}, speed, 'swing');
+      return false;
+   });
+});
+</script>
+
+</body>
+</html>

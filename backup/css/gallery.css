@@ -1,0 +1,48 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/*--- main ---*/
+
+#main{
+		width:80%;
+		margin:0 auto;
+}
+
+#main ul{
+	display:flex;
+	flex-wrap:wrap;
+}
+
+#main ul li{
+	width:50%;
+	padding:20px;
+	}
+
+#main ul li:hover{
+	cursor: pointer;
+	transition:.3s;
+		opacity:0.7;
+}
+
+#main ul li img{
+	width:120%;
+}
+
+
+
+
+/*-- toTop --*/
+
+.toTop{
+	clear:both;
+}
+
+
+@media screen and (min-width:750px){
+
+#main ul li{
+	width:25%;
+}
+
+}
