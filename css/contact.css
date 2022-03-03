@@ -1,28 +1,24 @@
 @charset "utf-8";
 /* CSS Document */
 
-
-
 /*--- main ---*/
+#main {
+	width: 80%;
+	margin: 0 auto;
+}
 
 
-#main{
-width:80%
-margin:0 auto;
-	}
-
-
-.form{
-	width:80%;
-	margin:0px auto;
-	text-align:center;
-	}
+.form {
+	width: 80%;
+	margin: 0px auto;
+	text-align: center;
+}
 
 /* contact*/
 
 .txtBox {
 	margin-bottom: 30px;
-	margin-top:30px;
+	margin-top: 30px;
 }
 
 .contactForm dt span.required {
@@ -33,12 +29,12 @@ margin:0 auto;
 	color: #FFFFFF;
 }
 
-
 .contactForm dd {
 	margin-bottom: 15px;
 }
-.contactForm dd.w01{
-	padding:7px 0px;
+
+.contactForm dd.w01 {
+	padding: 7px 0px;
 }
 
 input.submitBtn {
@@ -52,38 +48,35 @@ input.submitBtn {
 	font-weight: bold;
 	color: #FFFFFF;
 }
-textarea{
-	border-color:#DDD;
-	}
 
+textarea {
+	border-color: #DDD;
+}
 
 /* タブレット向け：760px～960px */
 @media only screen and (min-width: 760px) {
 
-.txtBox {
-	margin-bottom: 50px;
-}
-.contactForm dd.w01 input {
-	width: 350px;
-}
-.contactForm dd.w02 textarea {
-	width: 400px;
-}
+	.txtBox {
+		margin-bottom: 50px;
+	}
+
+	.contactForm dd.w01 input {
+		width: 350px;
+	}
+
+	.contactForm dd.w02 textarea {
+		width: 400px;
+	}
 
 
-} /* タブレット向け */
-
+}
 
 /* PC向けレイアウトの指定：961px～ */
-@media only screen and (min-width: 961px) {
-
-
-}
+@media only screen and (min-width: 961px) {}
 
 
 
 /*-- toTop --*/
-
-.toTop{
-	clear:both;
-	}
+.toTop {
+	clear: both;
+}

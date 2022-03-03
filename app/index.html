@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+     <meta charset="UTF-8" />
+     <title>渓水工房 | 丹波の郷の陶芸工房</title>
+     <meta name="keywords" content="" />
+     <meta name="description" content="" />
+     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+     <link href="/css/common.css" rel="stylesheet" media="all" />
+</head>
+
+<body id="home">
+     <!------------ header ------------->
+     <header id="home">
+          <div id="logo">
+               <a href="#"><img src="/img/head.jpg" /></a>
+          </div>
+          <!--///END #logo-->
+     </header>
+
+     <nav>
+          <ul id="header_nav">
+               <li class="about"><a href="about.html">About</a></li>
+               <li class="works"><a href="works.html">Works</a></li>
+               <li class="gallery"><a href="gallery.html">Gallery</a></li>
+               <li class="contact"><a href="contact.html">Contact</a></li>
+          </ul>
+     </nav>
+
+     <!------------ main -------------->
+     <div id="main">
+          <div id="slide">
+               <img src="/img/index/index1.jpg" alt="#" />
+               <img src="/img/index/index3.jpg" alt="#" />
+               <img src="/img/index/index4.jpg" alt="#" />
+               <img src="/img/index/index5.jpg" alt="#" />
+               <img src="/img/index/index6.jpg" alt="#" />
+
+               <p id="nav-r"><a href="javascript:void(0);"></a></p>
+               <p id="nav-l"><a href="javascript:void(0);"></a></p>
+          </div>
+          <div id="text">
+               <p>
+                    わたしたちはそれぞれ京都の窯元で修行・経験を積み、１９９２年に兵庫県丹波市で窯を開きました。
+                    当初から仮の工房として仕事を始め、今では丹波市春日町にある丘の上で陶器の制作をしています。
+                    生活に寄り添った、落ち着き深い陶器を皆様にご提供できれば、との想いで作陶をしております。
+               </p>
+          </div>
+          <!--///END #text-->
+     </div>
+     <!--///END #main-->
+
+     <!-- toTop -->
+     <p class="toTop">
+          <a href="#"><img src="/img/icon_totop.gif" alt="" /></a>
+     </p>
+
+     <!--footer-->
+     <footer>
+          <nav>
+               <ul id="footer_nav">
+                    <li class="about"><a href="about.html">About</a></li>
+                    <li class="works"><a href="works.html">Works</a></li>
+                    <li class="gallery"><a href="gallery.html">Gallery</a></li>
+                    <li class="contact"><a href="contact.html">Contact</a></li>
+               </ul>
+          </nav>
+          <p>&copy; 渓水工房 All rights reserved.</p>
+     </footer>
+     <!--///END #footer-->
+
+     <!-- jQuery本体の読み込み -->
+     <script src="/js/jquery-3.6.0.min.js"></script>
+
+     <!-- ＃リンクのスムーズスクロール -->
+     <script>
+          $(function () {
+               // #で始まるリンクをクリックしたら実行されます
+               $("a[href^='#']:not(.img)").click(function () {
+                    // スクロールの速度
+                    var speed = 500; // ミリ秒で記述
+                    var href = $(this).attr("href");
+                    var target = $(href == "#" || href == "" ? "html" : href);
+                    var position = target.offset().top;
+                    $("body,html").animate({ scrollTop: position }, speed, "swing");
+                    return false;
+               });
+          });
+     </script>
+
+     <script>
+          $(function () {
+               //（１）ページの概念・初期ページを設定
+               var page = 0;
+
+               //（２）イメージの数を最後のページ数として変数化
+               var lastPage = parseInt($("#slide img").length - 1);
+
+               //（３）最初に全部のイメージを一旦非表示にします
+               $("#slide img").css("display", "none");
+
+               //（４）初期ページを表示
+               $("#slide img").eq(page).css("display", "block");
+
+               //（５）ページ切換用、自作関数作成
+               function changePage() {
+                    $("#slide img").fadeOut(1000);
+                    $("#slide img").eq(page).fadeIn(1000);
+               }
+
+               //（６）～秒間隔でイメージ切換の発火設定
+               var Timer;
+               function startTimer() {
+                    Timer = setInterval(function () {
+                         if (page === lastPage) {
+                              page = 0;
+                              changePage();
+                         } else {
+                              page++;
+                              changePage();
+                         }
+                    }, 5000);
+               }
+               //（７）～秒間隔でイメージ切換の停止設定
+               function stopTimer() {
+                    clearInterval(Timer);
+               }
+
+               //（８）タイマースタート
+               startTimer();
+
+               /*オプションを足す場合はここへ記載*/
+               //（９）「次へ」をクリック
+               $("#nav-r a").click(function () {
+                    //タイマー停止＆スタート（クリックした時点から～秒とする為）
+                    stopTimer();
+                    startTimer();
+                    if (page === lastPage) {
+                         page = 0;
+                         changePage();
+                    } else {
+                         page++;
+                         changePage();
+                    }
+               });
+
+               //「戻る」をクリック
+               $("#nav-l a").click(function () {
+                    //タイマー停止＆スタート（クリックした時点から～秒とする為）
+                    stopTimer();
+                    startTimer();
+                    if (page === 0) {
+                         page = lastPage;
+                         changePage();
+                    } else {
+                         page--;
+                         changePage();
+                    }
+               });
+          });
+     </script>
+</body>
+
+</html>

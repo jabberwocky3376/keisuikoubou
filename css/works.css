@@ -1,35 +1,26 @@
 @charset "utf-8";
 /* CSS Document */
 
-
-
 /*--- main ---*/
-
-#main{
-width:80%;
-margin:0 auto;
+#main {
+	width: 80%;
+	margin: 0 auto;
 }
 
+.W01 {
+	text-align: center;
+}
 
-.W01{
-	text-align:center;
-	}
+.W01 img {
+	margin: 10px;
+	height: 200px;
+}
 
-.W01 img{
-	margin:10px;
-	height:200px;
-	}
-
-.text{
-	border:1px dashed;
-	}
-
-
-
-
+.text {
+	border: 1px dashed;
+}
 
 /*-- toTop --*/
-
-.toTop{
-	clear:both;
-	}
+.toTop {
+	clear: both;
+}
