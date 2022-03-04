@@ -34,8 +34,7 @@
 		<div id="main">
 			<div class="form">
 				<p class="txtBox">制作の依頼・ご相談などお気軽にお問い合わせくださいませ。<br>下記フォームよりわかる範囲でご記入ください。必須の項目は必ずご記入お願いします。</p>
-
-				<form id="form" action="send.php" method="post" onsubmit="return mailcheck()">
+				<form id="form" method="POST" netlify>
 					<dl class="contactForm">
 						<dt>貴社名</dt>
 						<dd class="w01"><input type="text" name="company"></dd>
@@ -43,16 +42,12 @@
 						<dd class="w01"><input type="text" name="name"></dd>
 						<dt>メールアドレス<span class="required">必須</span></dt>
 						<dd class="w01"><input type="email" name="mail"></dd>
-						<dt>メールアドレス(確認用)<span class="required">必須</span></dt>
-						<dd class="w01"><input type="email" name="mail2"></dd>
 						<dt>電話番号</dt>
 						<dd class="w01"><input type="tel" name="tel"></dd>
 						<dt>お問い合わせ内容<span class="required">必須</span></dt>
 						<dd class="w02"><textarea name="message" cols="40" rows="10"></textarea></dd>
 					</dl>
-
-					<p><input type="submit" value="内容を送信する" onclick="check_contactform()" class="submitBtn"
-							value="post"></p>
+					<p><input type="submit" value="内容を送信する" class="submitBtn" value="post"></p>
 				</form>
 			</div>
 			<!--///END #form-->
@@ -94,15 +89,6 @@
 					return false;
 				});
 			});
-
-			function mailcheck() {
-				var f = form.mail.value;
-				var g = form.mail2.value;
-				if (f != g) {
-					alert("メールアドレスが間違っています");
-					return false;
-				}
-			}
 		</script>
 </body>
 

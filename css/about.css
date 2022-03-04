@@ -13,21 +13,19 @@
 }
 
 #main section h3 {
-	font-size: 18px;
+	font-size: 1rem;
 }
 
 #main img {
 	margin: 50px auto;
 }
 
-
 #main .prof {
 	width: 100%;
+	margin-top: 100px;
 }
 
 #main .prof dl {
-	width: 100%;
-	margin: 100px 0px 0px 0;
 	overflow: hidden;
 	text-align: left;
 }

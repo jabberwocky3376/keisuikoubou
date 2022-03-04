@@ -36,14 +36,11 @@
                <img src="/img/index/index4.jpg" alt="#" />
                <img src="/img/index/index5.jpg" alt="#" />
                <img src="/img/index/index6.jpg" alt="#" />
-
-               <p id="nav-r"><a href="javascript:void(0);"></a></p>
-               <p id="nav-l"><a href="javascript:void(0);"></a></p>
           </div>
           <div id="text">
                <p>
-                    わたしたちはそれぞれ京都の窯元で修行・経験を積み、１９９２年に兵庫県丹波市で窯を開きました。
-                    当初から仮の工房として仕事を始め、今では丹波市春日町にある丘の上で陶器の制作をしています。
+                    わたしたちはそれぞれ京都の窯元で修行・経験を積み、１９９２年に兵庫県丹波市で窯を開きました。<br>
+                    当初から仮の工房として仕事を始め、今では丹波市春日町にある丘の上で陶器の制作をしています。<br>
                     生活に寄り添った、落ち着き深い陶器を皆様にご提供できれば、との想いで作陶をしております。
                </p>
           </div>
@@ -92,7 +89,7 @@
      <script>
           $(function () {
                //（１）ページの概念・初期ページを設定
-               var page = 0;
+               var page = Math.floor(Math.random() * parseInt($("#slide img").length));
 
                //（２）イメージの数を最後のページ数として変数化
                var lastPage = parseInt($("#slide img").length - 1);
@@ -131,33 +128,6 @@
                startTimer();
 
                /*オプションを足す場合はここへ記載*/
-               //（９）「次へ」をクリック
-               $("#nav-r a").click(function () {
-                    //タイマー停止＆スタート（クリックした時点から～秒とする為）
-                    stopTimer();
-                    startTimer();
-                    if (page === lastPage) {
-                         page = 0;
-                         changePage();
-                    } else {
-                         page++;
-                         changePage();
-                    }
-               });
-
-               //「戻る」をクリック
-               $("#nav-l a").click(function () {
-                    //タイマー停止＆スタート（クリックした時点から～秒とする為）
-                    stopTimer();
-                    startTimer();
-                    if (page === 0) {
-                         page = lastPage;
-                         changePage();
-                    } else {
-                         page--;
-                         changePage();
-                    }
-               });
           });
      </script>
 </body>
