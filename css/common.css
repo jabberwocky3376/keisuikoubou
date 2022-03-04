@@ -89,17 +89,14 @@ li {
 nav ul {
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
 	margin-bottom: 50px;
 }
 
 nav ul li {
-	font-size: 1rem;
+	font-size: .8rem;
 	text-align: center;
-	width: 50%;
 	padding: 20px 10px;
-	border-top: 1px solid #ccc;
-	border-bottom: 1px solid #ccc;
-	border-left: 1px solid #ccc;
 	margin-bottom: -1px;
 	letter-spacing: 3px;
 }
@@ -118,9 +115,10 @@ h2 {
 }
 
 #slide {
+	border: #333;
 	position: relative;
-	width: 60%;
-	margin: 100px auto;
+	width: 80%;
+	margin: 50px auto;
 	padding-bottom: 45%;
 }
 
@@ -131,12 +129,13 @@ h2 {
 }
 
 #text {
-	text-align: center;
+	position: relative;
+	width: 80%;
+	margin: 120px auto 75px auto;
+	text-align: left;
 	font-size: .5rem;
-	margin-top: 25px;
-	margin-bottom: 75px;
-	letter-spacing: .5px;
-	line-height: 3;
+	letter-spacing: 0.1px;
+	line-height: 2.5;
 }
 
 /*-----totop-----*/
@@ -168,6 +167,9 @@ footer ul li a:after {
 	background: #fff;
 }
 
+footer #footer_nav {
+	justify-content: flex-start;
+}
 
 @media screen and (min-width:750px) and (max-width:960px) {
 
@@ -181,6 +183,7 @@ footer ul li a:after {
 	}
 
 	nav ul li {
+		font-size: 1rem;
 		width: 12%;
 		border: none;
 	}
@@ -198,7 +201,12 @@ footer ul li a:after {
 		justify-content: flex-start;
 	}
 
+	#slide {
+		width: 60%;
+	}
+
 	#text {
+		width: 100%;
 		text-align: center;
 		font-size: .85rem;
 		margin-top: 75px;
@@ -220,6 +228,7 @@ footer ul li a:after {
 	}
 
 	nav ul li {
+		font-size: 1rem;
 		width: 12%;
 		border: none;
 	}
@@ -237,7 +246,12 @@ footer ul li a:after {
 		justify-content: flex-start;
 	}
 
+	#slide {
+		width: 60%;
+	}
+
 	#text {
+		width: 100%;
 		text-align: center;
 		font-size: .9rem;
 		margin-top: 100px;
