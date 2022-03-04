@@ -53,6 +53,11 @@ a {
 	text-decoration: none;
 }
 
+a .title {
+	display: inline-block;
+	text-decoration: none;
+}
+
 li a::after {
 	position: absolute;
 	bottom: -3px;
@@ -77,12 +82,8 @@ li {
 /*--- header ---*/
 #logo {
 	text-align: center;
-	margin: 50px;
-}
-
-#logo img {
-	width: 275px;
-	color: #60B49F;
+	margin-top: 50px;
+	margin-bottom: 50px;
 }
 
 nav ul {
@@ -119,7 +120,7 @@ h2 {
 #slide {
 	position: relative;
 	width: 60%;
-	margin: 0 auto;
+	margin: 100px auto;
 	padding-bottom: 45%;
 }
 
@@ -129,34 +130,13 @@ h2 {
 	top: 0;
 }
 
-#slide p#nav-r a {
-	position: absolute;
-	top: 50%;
-	right: -25px;
-	width: 30px;
-	height: 30px;
-	border: 5px solid;
-	border-color: #565656 #565656 transparent transparent;
-	transform: rotate(45deg);
-}
-
-#slide p#nav-l a {
-	position: absolute;
-	top: 50%;
-	left: -25px;
-	width: 30px;
-	height: 30px;
-	border: 5px solid;
-	border-color: transparent transparent #565656 #565656;
-	transform: rotate(45deg);
-}
-
 #text {
 	text-align: center;
-	margin-top: 150px;
-	margin-bottom: 150px;
-	letter-spacing: 2px;
-	line-height: 4;
+	font-size: .5rem;
+	margin-top: 25px;
+	margin-bottom: 75px;
+	letter-spacing: .5px;
+	line-height: 3;
 }
 
 /*-----totop-----*/
@@ -192,7 +172,7 @@ footer ul li a:after {
 @media screen and (min-width:750px) and (max-width:960px) {
 
 	nav {
-		margin: 100px 0;
+		margin: 50px 0;
 	}
 
 	nav ul {
@@ -218,13 +198,20 @@ footer ul li a:after {
 		justify-content: flex-start;
 	}
 
-
+	#text {
+		text-align: center;
+		font-size: .85rem;
+		margin-top: 75px;
+		margin-bottom: 75px;
+		letter-spacing: .5px;
+		line-height: 3;
+	}
 }
 
 @media screen and (min-width:960px) {
 
 	nav {
-		margin: 100px 0;
+		margin: 50px 0;
 	}
 
 	nav ul {
@@ -245,14 +232,18 @@ footer ul li a:after {
 		width: 60%;
 	}
 
-	#text p {
-		font-size: 1rem;
-	}
-
-
 	footer #footer_nav {
 		padding-top: 50px;
 		justify-content: flex-start;
+	}
+
+	#text {
+		text-align: center;
+		font-size: .9rem;
+		margin-top: 100px;
+		margin-bottom: 150px;
+		letter-spacing: 2px;
+		line-height: 4;
 	}
 
 }
